@@ -10,48 +10,48 @@ default_baud := "115200"
 anchor-cal-upload:
     #!/usr/bin/env bash
     echo "Uploading Anchor Calibrate firmware..."
-    cd src/anchor_calibrate && pio run -t upload
+    cd anchor_calibrate && pio run -t upload
 
 anchor-cal-monitor:
-    #!/usr/bin/env bash
+    #!/usr/bin/env bashclear
     echo "Opening Serial Monitor for Anchor Calibrate..."
-    cd src/anchor_calibrate && pio device monitor -p {{default_port}} -b {{default_baud}}
+    cd anchor_calibrate && pio device monitor -p {{default_port}} -b {{default_baud}}
 
 # --- Setup Anchor --- 
 
 setup-anchor-upload:
     #!/usr/bin/env bash
     echo "Uploading Setup Anchor firmware..."
-    cd src/setup_anchor && pio run -t upload
+    cd setup_anchor && pio run -t upload
 
 setup-anchor-monitor:
     #!/usr/bin/env bash
     echo "Opening Serial Monitor for Setup Anchor..."
-    cd src/setup_anchor && pio device monitor -p {{default_port}} -b {{default_baud}}
+    cd setup_anchor && pio device monitor -p {{default_port}} -b {{default_baud}}
 
 # --- Setup Tag --- 
 
 setup-tag-upload:
     #!/usr/bin/env bash
     echo "Uploading Setup Tag firmware..."
-    cd src/setup_tag && pio run -t upload
+    cd setup_tag && pio run -t upload
 
 setup-tag-monitor:
     #!/usr/bin/env bash
     echo "Opening Serial Monitor for Setup Tag..."
-    cd src/setup_tag && pio device monitor -p {{default_port}} -b {{default_baud}}
+    cd setup_tag && pio device monitor -p {{default_port}} -b {{default_baud}}
 
 # --- Tag 2D Website --- 
 
 tag-website-upload:
     #!/usr/bin/env bash
     echo "Uploading Tag 2D Website firmware..."
-    cd src/tag_2d_website && pio run -t upload
+    cd tag_2d_website && pio run -t upload
 
 tag-website-monitor:
     #!/usr/bin/env bash
     echo "Opening Serial Monitor for Tag 2D Website..."
-    cd src/tag_2d_website && pio device monitor -p {{default_port}} -b {{default_baud}}
+    cd tag_2d_website && pio device monitor -p {{default_port}} -b {{default_baud}}
 
 # --- General Commands --- 
 
